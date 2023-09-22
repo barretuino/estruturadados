@@ -1,0 +1,11 @@
+https://github.com/barretuino/estruturadados
+
+Estrutura: é uma struct em linguagens estruturadas, tais como C e Basic. Em geral uma struct é definição de um novo tipo de dado que tem atributos internos. Equivale (similar), guardada as proporções, a definição de uma class em uma estrutura que fosse O.O. (Orientada a Objetos).
+
+Vetores - São unidirecionais
+   int valores[50];
+   valores[0]= 10;
+   valores[1]= 5;
+   valores[2]= -4;
+   ....
+   valores[49]= 123;

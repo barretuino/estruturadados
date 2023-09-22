@@ -1,0 +1,59 @@
+Notas de Aula 14/09/2023 - Pilhas
+
+Uma pilha é uma estrutura de dados amplamente utilizada na ciência da computação e programação para armazenar elementos de forma que o acesso a eles seja restrito a um único extremo, chamado de topo (ou "top" em inglês). 
+
+As pilhas seguem o princípio conhecido como LIFO, que significa "Last In, First Out" (último a entrar, primeiro a sair). Isso significa que o último elemento adicionado à pilha é o primeiro a ser removido.
+
+Aqui estão algumas das principais aplicações de pilhas em estruturas de dados e programação:
+
+Gerenciamento de chamadas de funções: As pilhas são frequentemente usadas para rastrear chamadas de funções em programas. Cada vez que uma função é chamada, as informações relevantes, como os parâmetros e o endereço de retorno, são empilhadas. Quando a função é concluída, essas informações são desempilhadas, permitindo que o programa retorne à função chamadora.
+
+As inserções são realizadas por um processo de push(s, i) 
+em que 's' é a pilha e 'i' a posição do topo.
+
+LITERATURA: push(s, i)
+PRATICA:    void empilhar(pilha** p, int numero){
+
+As remoções são realizadas por um processo de pop(s) em que 's' é a pilha, recebemos o valor de i em que:
+
+i = pop(s);
+
+LITERATURA: pop(s)
+PRATICA: 	void desempilhar(pilha** p){
+
+Navegação em algoritmos de busca: Algoritmos de busca em profundidade, como a busca em profundidade de grafos, frequentemente utilizam pilhas para rastrear o caminho percorrido. Os nós a serem explorados são empilhados e, quando não há mais nós a serem explorados em um ramo, a pilha é desempilhada para voltar ao nó anterior.
+
+Implementação de operações de desfazer (undo): Em muitos aplicativos, como editores de texto e programas de design gráfico, pilhas são usadas para rastrear as operações realizadas pelo usuário. Isso permite que o usuário desfaça ações na ordem inversa em que foram executadas, seguindo o princípio LIFO.
+
+Avaliação de expressões matemáticas: Pilhas podem ser usadas para avaliar expressões matemáticas na notação polonesa reversa (RPN). Nesse caso, os operandos são empilhados à medida que são encontrados, e operadores são aplicados aos operandos no topo da pilha.
+
+Backtracking em algoritmos: Algoritmos de backtracking, como o usado em problemas de resolução de labirintos ou quebra-cabeças, frequentemente usam pilhas para rastrear a sequência de decisões tomadas. Quando uma solução não é encontrada, o backtracking envolve a remoção das decisões anteriores, que são desempilhadas.
+
+Implementação de estruturas de dados mais complexas: Pilhas podem ser usadas como componentes em estruturas de dados mais complexas, como pilhas duplas (deque) ou para auxiliar na implementação de algoritmos de estruturas de dados como filas, por exemplo.
+
+Em resumo, pilhas são uma estrutura de dados fundamental para muitos aspectos da programação e são amplamente utilizadas em algoritmos e aplicações para controlar a ordem de acesso e processamento de elementos. Elas são especialmente úteis quando a ordem em que os elementos são manipulados é importante ou quando é necessário rastrear um histórico de operações.
+
+*******************************************************************
+Alguns exemplos práticos de uso de pilhas em programação:
+
+Validação de expressões matemáticas: Pilhas podem ser usadas para validar se uma expressão matemática está bem formada. Por exemplo, ao analisar uma expressão aritmética, você pode empilhar os operadores encontrados e desempilhá-los conforme encontra operandos, garantindo que a expressão tenha uma sintaxe válida.
+
+Exemplo:
+	Expressão: (3 + 2) * (5 - 1)
+	Pilha de operadores: (, +, *, (
+
+Navegação em árvores: Ao percorrer uma árvore, como uma árvore binária, você pode usar uma pilha para rastrear os nós que ainda precisam ser visitados. Isso é útil em algoritmos de busca em árvore, como a travessia em ordem, pré-ordem e pós-ordem.
+
+Reverter uma sequência: Pilhas podem ser usadas para reverter uma sequência de elementos. Você empilha os elementos na ordem original e, em seguida, desempilha-os para obter a ordem reversa.
+
+Histórico de navegação em um navegador web: Os navegadores da web usam uma pilha para rastrear as páginas da web visitadas. Quando você clica em um link, a página atual é empilhada e a nova página é carregada. Você pode voltar às páginas anteriores desempilhando a pilha.
+
+Implementação de botões "Desfazer" e "Refazer" em aplicativos: Em muitos aplicativos, como editores de texto ou software de design gráfico, pilhas são usadas para rastrear as ações do usuário. Quando o usuário executa uma ação, ela é empilhada. O botão "Desfazer" desempilha a ação mais recente, revertendo-a, e o botão "Refazer" pode reempilhar a ação desfeita.
+
+Resolução de problemas de quebra-cabeças: Em quebra-cabeças como o "Torre de Hanoi", as pilhas são usadas para rastrear os movimentos e resolver o quebra-cabeça.
+
+Avaliação de expressões pós-fixas (notação polonesa reversa): Pilhas são essenciais para a avaliação eficiente de expressões pós-fixas, onde os operandos são empilhados e os operadores aplicados aos operandos no topo da pilha.
+
+Armazenamento temporário de estados em algoritmos de backtracking: Em algoritmos de backtracking, como o de resolução de labirintos, as pilhas são usadas para rastrear o caminho percorrido. Quando um caminho não leva à solução, o último estado é desempilhado e a busca continua de onde parou.
+
+Esses são apenas alguns exemplos de como as pilhas são utilizadas em programação. Elas são uma estrutura de dados versátil e poderosa que desempenha um papel fundamental em muitos algoritmos e aplicações.
