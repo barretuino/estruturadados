@@ -1,5 +1,5 @@
 package arvores;
-//DAVI COSTA BARROSO
+
 public class No {
 	private int dado;
 	No esquerdo;
