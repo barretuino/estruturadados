@@ -1,5 +1,5 @@
 package arvores;
-//DAVI COSTA BARROSO
+
 public class Arvore {
 	No raiz;
 
