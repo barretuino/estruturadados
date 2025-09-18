@@ -1,0 +1,69 @@
+Notas de Aula 18 09 2025
+Filas
+
+O que são Filas em Estrutura de Dados?
+
+Em estruturas de dados, uma fila é uma coleção linear de elementos onde a inserção de novos elementos ocorre no final da fila e a remoção de elementos ocorre no início da fila. Essa estrutura segue o princípio do "primeiro a entrar, primeiro a sair" (FIFO, do inglês "First-In-First-Out"), o que significa que o elemento que foi adicionado à fila mais cedo é o primeiro a ser removido.
+
+Uma fila é uma estrutura de dados importante para muitas aplicações do mundo real, como simulações, sistemas de gerenciamento de tarefas e agendamento de recursos. Ela pode ser implementada de várias maneiras, sendo as implementações mais comuns:
+
+1. Fila Linear (Array-Based Queue): Nessa implementação, os elementos são armazenados em um array, e dois índices, geralmente chamados de "front" (frente) e "rear" (traseira), são usados para controlar a posição de inserção e remoção. Inserir um elemento na fila (enfileirar) envolve adicionar o elemento à posição "rear", enquanto remover um elemento da fila (desenfileirar) envolve remover o elemento na posição "front".
+
+2. Fila Encadeada (Linked Queue): Nessa implementação, os elementos da fila são armazenados em nós encadeados, onde cada nó contém o valor do elemento e uma referência ao próximo nó na fila. A inserção envolve adicionar um novo nó no final da fila (atualizar a referência "rear"), e a remoção envolve remover o nó no início da fila (atualizar a referência "front").
+
+As operações comuns em uma fila incluem:
+
+* Enfileirar (enqueue): Adicionar um elemento ao final da fila.
+
+* Desenfileirar (dequeue): Remover o elemento no início da fila.
+Verificar se a fila está vazia: Verificar se não há elementos na fila.
+
+* Obter o tamanho da fila: Contar o número de elementos na fila.
+
+* Obter o elemento na frente da fila: Sem remover o elemento, apenas observando o próximo elemento a ser desenfileirado.
+
+As filas são usadas em muitas situações em que a ordem de chegada dos elementos é importante e o processamento deve ocorrer de acordo com essa ordem. Elas são uma estrutura de dados fundamental em ciência da computação e são usadas em muitos algoritmos e aplicações.
+
+***********************************************************
+As filas (estruturas de dados FIFO - First-In-First-Out) são usadas em uma ampla variedade de aplicações em ciência da computação e sistemas do mundo real. Aqui estão alguns exemplos de uso de filas:
+
+1. Impressão de Documentos: Em um sistema de impressão, várias tarefas de impressão são enfileiradas em uma fila. A primeira tarefa a ser enfileirada é a primeira a ser impressa, garantindo que as impressões sejam tratadas na ordem em que foram solicitadas.
+
+2. Sistemas de Atendimento ao Cliente: Em centros de atendimento ao cliente, as solicitações dos clientes são frequentemente enfileiradas. As chamadas telefônicas, mensagens de chat ou e-mails são atendidos na ordem em que foram recebidos.
+
+3. Escalonamento de Processos em Sistemas Operacionais: Em sistemas operacionais multitarefa, os processos são enfileirados para uso da CPU. O escalonador do sistema operacional seleciona o próximo processo da fila para execução.
+
+4. Breadth-First Search (BFS): O algoritmo de busca em largura é usado para percorrer grafos. Ele utiliza uma fila para manter um registro dos nós a serem visitados em uma ordem específica, garantindo que os nós sejam visitados em largura antes de avançar para a profundidade.
+
+5. Sistemas de Mensagens: Em sistemas de mensagens, como o RabbitMQ e o Apache Kafka, as mensagens são enfileiradas antes de serem processadas por consumidores. Isso ajuda a garantir que as mensagens sejam processadas na ordem correta.
+
+6. Controle de Tarefas em Impressoras 3D: Impressoras 3D usam filas para gerenciar tarefas de impressão. Os modelos a serem impressos são enfileirados, e a impressora seleciona automaticamente o próximo modelo a ser impresso conforme a ordem na fila.
+
+7. Gerenciamento de Tarefas em Sistemas de Produção: Em sistemas de produção industrial, as tarefas de montagem ou processamento são frequentemente enfileiradas para otimizar o fluxo de trabalho e garantir que os produtos sejam fabricados na ordem correta.
+
+8. Pedidos em Restaurantes e Cafeterias: Em estabelecimentos de alimentação, os pedidos dos clientes são enfileirados na ordem em que são feitos. A cozinha ou o balcão de atendimento prepara os pedidos na sequência da fila.
+
+9. Gerenciamento de Tarefas em Computação em Nuvem: Em ambientes de computação em nuvem, as solicitações para provisionar recursos (como máquinas virtuais) são enfileiradas para serem processadas por um sistema de gerenciamento de recursos.
+
+10. Algoritmos de Resolução de Problemas: Filas são usadas em algoritmos como o algoritmo de busca em largura (BFS) em inteligência artificial e em algoritmos de resolução de quebra-cabeças, como o algoritmo A*.
+
+Esses são apenas alguns exemplos de como as filas são usadas em várias aplicações. Em geral, as filas são uma estrutura de dados fundamental para garantir o processamento ordenado de tarefas ou elementos em sistemas computacionais e em muitos outros cenários do mundo real.
+
+************************************************************
+Embora as filas sejam uma estrutura de dados extremamente útil em muitos contextos, elas também têm algumas limitações que você deve considerar ao decidir usá-las:
+
+1. Tamanho Fixo: As filas baseadas em arrays têm um tamanho fixo, o que significa que você precisa definir um tamanho máximo antecipadamente. Se a fila estiver cheia e você tentar enfileirar um novo elemento, isso resultará em um estouro de fila. Uma solução para esse problema é usar uma fila circular, mas mesmo assim, você ainda precisa definir um tamanho máximo.
+
+2. Desempenho de Inserção e Remoção: Em filas baseadas em arrays, a inserção no início da fila (operação de desenfileiramento) pode ser ineficiente, pois requer a movimentação de todos os elementos restantes para preencher o espaço vazio no início da fila. Em contrapartida, as filas encadeadas são mais eficientes para inserção e remoção, mas consomem mais memória devido à necessidade de armazenar referências adicionais.
+
+3. Acesso Aleatório Limitado: Nas filas, o acesso direto a elementos específicos é limitado. Você só pode acessar o elemento na frente da fila sem removê-lo. Se você precisar de acesso aleatório a elementos em uma coleção, uma lista ou um array podem ser mais apropriados.
+
+4. Complexidade de Tempo em Algoritmos: Algumas operações em filas podem ter uma complexidade de tempo alta, dependendo da implementação. Por exemplo, verificar se um elemento específico está na fila pode exigir uma busca sequencial, o que pode ser lento em filas grandes.
+
+5. Consumo de Memória: Em filas encadeadas, cada elemento requer espaço adicional para armazenar uma referência ao próximo elemento. Isso pode resultar em maior consumo de memória em comparação com outras estruturas de dados, como arrays.
+
+6. Necessidade de Limpeza: Em algumas implementações, não há uma operação de limpeza automática de elementos antigos. Se você não gerenciar a fila adequadamente, ela pode crescer indefinidamente e consumir recursos desnecessários.
+
+7. Complexidade de Implementação: Implementar uma fila eficiente pode ser mais complexo do que implementar estruturas de dados mais simples, como listas. Você precisa garantir que as operações de enfileiramento e desenfileiramento sejam tratadas de maneira adequada e segura.
+
+Apesar dessas limitações, as filas são extremamente valiosas em situações em que a ordem de chegada dos elementos é importante e em que você deseja garantir um processamento ordenado. No entanto, é importante escolher a estrutura de dados certa com base nos requisitos específicos do seu problema. Em alguns casos, pode ser necessário usar estruturas de dados diferentes, como pilhas ou árvores, para atender aos requisitos do seu algoritmo ou aplicação.

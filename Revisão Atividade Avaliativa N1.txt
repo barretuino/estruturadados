@@ -1,0 +1,197 @@
+Revião para Atividade Avaliativa N1
+
+1. Introdução a Estruturas de Dados. Tipos básicos de dados - Declaração e Uso de matrizes
+
+Uma estrutura de dados é uma forma de organizar, gerenciar e armazenar dados para que possam ser acessados, manipulados e processados de maneira eficiente. Pense nisso como uma "caixa" projetada para um propósito específico. A escolha da estrutura de dados certa pode ter um impacto enorme no desempenho de um programa, tornando-o mais rápido e menos exigente em termos de memória.
+
+As estruturas de dados são baseadas em tipos de dados básicos ou primitivos, que são os blocos de construção mais simples da programação. Alguns exemplos comuns são:
+
+	Inteiro (int): números inteiros (ex: 5, -10, 150).
+
+	Ponto Flutuante (float): números com casas decimais (ex: 3.14, -0.5).
+
+	Caractere (char): letras, símbolos ou números representados como texto (ex: 'A', '#', '7').
+
+	Booleano (bool): valores lógicos que podem ser verdadeiro ou falso.
+	
+Declaração e Uso de Matrizes: Uma das estruturas de dados mais fundamentais é a matriz, também conhecida como array ou vetor. A principal característica da matriz é que ela armazena uma coleção de elementos do mesmo tipo de dado em uma sequência contígua na memória do computador.
+	Tipo rigído
+	Tamanho fixo
+	Acesso sequencial
+	
+Uma matriz é uma estrutura de dados homogênea e estática.
+
+Homogênea: Todos os elementos dentro da matriz devem ser do mesmo tipo. Você pode ter uma matriz de inteiros, uma matriz de caracteres, mas não uma que misture os dois.
+
+Estática: O tamanho da matriz é fixo e definido no momento da sua declaração. Não é possível alterar o seu tamanho depois que ela foi criada.
+
+Os elementos de uma matriz são acessados por meio de um índice, que é um número inteiro. Na maioria das linguagens de programação, a contagem dos índices começa em 0.
+
+Tipos de Matrizes
+As matrizes podem ser de diferentes dimensões:
+
+Matriz Unidimensional (Vetor): É uma lista linear de elementos. Pense em uma única linha de dados.
+
+Exemplo de declaração: int vetor[5]; // Declara um vetor de 5 posições para armazenar inteiros.
+
+Matriz Bidimensional: Funciona como uma tabela, com linhas e colunas.
+
+Exemplo de declaração: int matriz[3][4]; // Declara uma matriz com 3 linhas e 4 colunas.
+
+Matrizes Multidimensionais: Podem ter três ou mais dimensões, como um cubo de dados, mas são menos comuns na prática.
+
+Estrutura: é uma struct em linguagens estruturadas, tais como C e Basic. Em geral uma struct é definição de um novo tipo de dado que tem atributos internos. Equivale (similar), guardada as proporções, a definição de uma class em uma estrutura que fosse O.O. (Orientada a Objetos).
+
+Vetores - São unidirecionais
+   int valores[50];
+   valores[0]= 10;
+   valores[1]= 5;;
+   ....
+   valores[49]= 123;
+   valores[2]= -4
+
+2. Tipos básicos de dados - Coleções, Mapas e Listas
+
+Em estruturas de dados, coleções, mapas e listas são maneiras de agrupar e gerenciar múltiplos dados. Cada um serve a um propósito específico e oferece diferentes formas de organização e acesso.
+
+Coleções (Collections)
+Uma coleção é um termo genérico para qualquer estrutura que agrupa múltiplos elementos. É uma ideia mais ampla, um "superconjunto" que inclui as listas, mapas, conjuntos (sets) e outras estruturas.
+
+Finalidade: Gerenciar um grupo de dados, permitindo operações como adicionar, remover ou verificar se um elemento existe.
+
+Características: A ordem dos elementos pode não ser garantida, e pode ou não permitir valores duplicados, dependendo do tipo específico da coleção.
+
+Listas (Lists)
+Uma lista é uma coleção ordenada de elementos que permite valores duplicados. A principal característica é a sequência: os elementos são armazenados em uma ordem linear e podem ser acessados por meio de um índice.
+
+Finalidade: Organizar dados em uma sequência, como uma fila de espera ou uma lista de tarefas.
+
+Características: Acesso por índice (geralmente começando em 0), permite elementos repetidos e seu tamanho é dinâmico. Pense em uma lista de compras: a ordem dos itens é importante e você pode ter "leite" duas vezes.
+
+Mapas (Maps)
+Um mapa, também conhecido como dicionário ou tabela hash, é uma coleção que armazena dados em pares de chave-valor. Em vez de usar um índice numérico, você usa uma chave única para encontrar o valor associado a ela.
+
+Finalidade: Armazenar e recuperar dados rapidamente usando uma chave.
+
+Características: A chave deve ser única, mas o valor pode ser duplicado. A ordem dos elementos geralmente não é garantida. Pense na lista telefônica: a chave é o nome da pessoa e o valor é o seu número. A ordem de entrada não importa, o que importa é encontrar o número pelo nome.
+
+Em resumo, se você precisa de uma sequência onde a ordem é vital, use uma lista. Se você precisa armazenar informações e acessá-las por um identificador exclusivo, use um mapa. E lembre-se, a coleção é o termo guarda-chuva que engloba ambos.
+
+3. Listas lineares
+
+As listas lineares são estruturas de dados que organizam os elementos em uma sequência, um após o outro. Pense nelas como uma fila ou uma corrente, onde cada elemento se conecta ao próximo, definindo uma ordem clara.
+
+Ao contrário de uma matriz, que é estática e tem um tamanho fixo, as listas lineares são dinâmicas. Isso significa que você pode adicionar ou remover elementos a qualquer momento, e a estrutura se ajusta automaticamente. Essa flexibilidade é a principal vantagem das listas, tornando-as ideais para situações em que o número de dados é desconhecido ou varia durante a execução do programa.
+
+Existem dois tipos principais de listas lineares:
+
+Listas Encadeadas (Linked Lists): Cada elemento (chamado de nó) contém o dado e um "ponteiro" que aponta para o próximo nó da sequência. Para acessar um elemento, é preciso percorrer a lista a partir do início, seguindo os ponteiros.
+
+Listas Sequenciais (Arrays Dinâmicos): São construídas sobre a base de uma matriz, mas quando a capacidade máxima é atingida, a estrutura cria uma nova matriz maior e copia todos os elementos para ela. Isso dá a sensação de uma lista flexível, embora por baixo dos panos ainda exista a ideia de posições sequenciais.
+
+Em resumo, se a matriz é um estacionamento de vagas fixas, a lista linear é uma fila de carros que pode aumentar ou diminuir de tamanho livremente.
+
+4. Listas ordenadas e circulares
+
+Uma lista circular é uma estrutura de dados que se assemelha a uma lista encadeada convencional, mas com uma diferença fundamental: o último elemento da lista está ligado ao primeiro elemento, formando um ciclo contínuo. Isso significa que não há um fim claramente definido na lista, pois ela se repete em um loop circular.
+
+Vamos explorar os conceitos básicos para explicar as listas circulares:
+
+* Nó e Elementos: Assim como em uma lista encadeada, uma lista circular é composta por nós. Cada nó contém um elemento (ou valor) e um ponteiro para o próximo nó na sequência.
+
+* Ciclo Contínuo: A principal característica que diferencia as listas circulares das listas encadeadas normais é que o último nó da lista aponta de volta para o primeiro nó, fechando o ciclo. Isso significa que, ao percorrer a lista, você eventualmente voltará ao início.
+
+Vantagens: As listas circulares têm algumas vantagens em relação às listas encadeadas tradicionais. Por exemplo, não é necessário acompanhar explicitamente o final da lista, já que o último nó está conectado ao primeiro. Isso pode simplificar algumas operações.
+
+Inserção e Remoção: As operações de inserção e remoção em listas circulares são semelhantes às de listas encadeadas. Ao inserir um novo nó, você precisa ajustar os ponteiros para manter a integridade do ciclo. Ao remover um nó, também é necessário atualizar os ponteiros dos nós adjacentes.
+
+Percorrendo a Lista: Para percorrer uma lista circular, você começa em qualquer nó e avança para o próximo nó seguindo os ponteiros. Como o último nó está conectado ao primeiro, o ciclo se repete indefinidamente.
+
+Caso Especial de Lista Vazia: Em uma lista circular vazia, o ponteiro do primeiro nó aponta para ele mesmo, indicando que é o único elemento na lista.
+
+Finalização da Iteração: Ao percorrer a lista circular, você pode escolher um critério de parada, como percorrer um número específico de elementos ou voltar ao nó inicial após uma iteração completa.
+
+Em resumo, uma lista circular é uma variação interessante da estrutura de dados de lista encadeada, em que o último nó está ligado ao primeiro, formando um ciclo contínuo. Isso tem implicações na forma como você manipula, percorre e opera essa estrutura de dados.
+
+5. Aplicações de listas
+Em que posso usar uma Lista Circular?
+
+As listas circulares podem ser úteis em diversas situações, proporcionando vantagens específicas para certos tipos de problemas. Algumas aplicações comuns incluem:
+
+Estruturas de Armazenamento Circular: Quando você precisa armazenar elementos em uma estrutura cíclica, como um ciclo de turnos em um jogo, agendamento de tarefas cíclicas ou ciclo de reprodução de mídia, as listas circulares são ideais. Não é necessário reiniciar a estrutura quando ela atinge o final; ela apenas continua a partir do início.
+
+Buffer Circular: Em sistemas de processamento de dados, você pode usar listas circulares como buffers circulares. Isso é útil quando você deseja armazenar uma quantidade limitada de dados em uma ordem cíclica, descartando os dados mais antigos conforme novos dados são inseridos.
+
+Gerenciamento de Memória: Em sistemas operacionais ou em sistemas embarcados, as listas circulares podem ser usadas para gerenciar blocos de memória em um pool. Quando um bloco é liberado, ele é adicionado de volta à lista circular para reutilização.
+
+Algoritmos de Troca: Algoritmos que envolvem a troca cíclica de elementos podem se beneficiar de listas circulares. Um exemplo é o algoritmo de Josephus, que envolve a remoção alternada de elementos de uma lista até que apenas um elemento permaneça.
+
+Cache Circular: Em caches de memória ou buffers de dados, você pode usar listas circulares para armazenar os dados mais recentes ou frequentemente acessados. À medida que novos dados chegam, os dados mais antigos são substituídos em uma ordem cíclica.
+
+Implementações de Algoritmos de Filas: Em implementações de filas de tamanho fixo, as listas circulares podem ser uma escolha eficiente. À medida que os elementos são inseridos e removidos, a estrutura se adapta automaticamente sem realocação de memória.
+
+Anéis de Roteamento em Redes: Em redes de computadores, anéis de roteamento são frequentemente implementados usando listas circulares. Cada nó na rede possui um endereço e encaminha mensagens para o próximo nó no anel até que a mensagem alcance o destino desejado.
+
+Essas são apenas algumas das muitas aplicações em que as listas circulares podem ser usadas. A decisão de usar uma lista circular depende das propriedades do problema em questão e das vantagens que essa estrutura pode oferecer em relação a outras opções de armazenamento e manipulação de dados.
+
+6. Pilhas
+
+Uma pilha é uma estrutura de dados amplamente utilizada na ciência da computação e programação para armazenar elementos de forma que o acesso a eles seja restrito a um único extremo, chamado de topo (ou "top" em inglês). 
+
+As pilhas seguem o princípio conhecido como LIFO, que significa "Last In, First Out" (último a entrar, primeiro a sair). Isso significa que o último elemento adicionado à pilha é o primeiro a ser removido.
+
+Aqui estão algumas das principais aplicações de pilhas em estruturas de dados e programação:
+
+Gerenciamento de chamadas de funções: As pilhas são frequentemente usadas para rastrear chamadas de funções em programas. Cada vez que uma função é chamada, as informações relevantes, como os parâmetros e o endereço de retorno, são empilhadas. Quando a função é concluída, essas informações são desempilhadas, permitindo que o programa retorne à função chamadora.
+
+As inserções são realizadas por um processo de push(s, i) 
+em que 's' é a pilha e 'i' a posição do topo.
+
+LITERATURA: push(s, i)
+PRATICA:    void empilhar(pilha** p, int numero){
+
+As remoções são realizadas por um processo de pop(s) em que 's' é a pilha, recebemos o valor de i em que:
+
+i = pop(s);
+
+LITERATURA: pop(s)
+PRATICA: 	void desempilhar(pilha** p){
+
+Navegação em algoritmos de busca: Algoritmos de busca em profundidade, como a busca em profundidade de grafos, frequentemente utilizam pilhas para rastrear o caminho percorrido. Os nós a serem explorados são empilhados e, quando não há mais nós a serem explorados em um ramo, a pilha é desempilhada para voltar ao nó anterior.
+
+Implementação de operações de desfazer (undo): Em muitos aplicativos, como editores de texto e programas de design gráfico, pilhas são usadas para rastrear as operações realizadas pelo usuário. Isso permite que o usuário desfaça ações na ordem inversa em que foram executadas, seguindo o princípio LIFO.
+
+Avaliação de expressões matemáticas: Pilhas podem ser usadas para avaliar expressões matemáticas na notação polonesa reversa (RPN). Nesse caso, os operandos são empilhados à medida que são encontrados, e operadores são aplicados aos operandos no topo da pilha.
+
+Backtracking em algoritmos: Algoritmos de backtracking, como o usado em problemas de resolução de labirintos ou quebra-cabeças, frequentemente usam pilhas para rastrear a sequência de decisões tomadas. Quando uma solução não é encontrada, o backtracking envolve a remoção das decisões anteriores, que são desempilhadas.
+
+Implementação de estruturas de dados mais complexas: Pilhas podem ser usadas como componentes em estruturas de dados mais complexas, como pilhas duplas (deque) ou para auxiliar na implementação de algoritmos de estruturas de dados como filas, por exemplo.
+
+Em resumo, pilhas são uma estrutura de dados fundamental para muitos aspectos da programação e são amplamente utilizadas em algoritmos e aplicações para controlar a ordem de acesso e processamento de elementos. Elas são especialmente úteis quando a ordem em que os elementos são manipulados é importante ou quando é necessário rastrear um histórico de operações.
+
+*******************************************************************
+Alguns exemplos práticos de uso de pilhas em programação:
+
+Validação de expressões matemáticas: Pilhas podem ser usadas para validar se uma expressão matemática está bem formada. Por exemplo, ao analisar uma expressão aritmética, você pode empilhar os operadores encontrados e desempilhá-los conforme encontra operandos, garantindo que a expressão tenha uma sintaxe válida.
+
+Exemplo:
+	Expressão: (3 + 2) * (5 - 1)
+	Pilha de operadores: (, +, *, (
+
+Navegação em árvores: Ao percorrer uma árvore, como uma árvore binária, você pode usar uma pilha para rastrear os nós que ainda precisam ser visitados. Isso é útil em algoritmos de busca em árvore, como a travessia em ordem, pré-ordem e pós-ordem.
+
+Reverter uma sequência: Pilhas podem ser usadas para reverter uma sequência de elementos. Você empilha os elementos na ordem original e, em seguida, desempilha-os para obter a ordem reversa.
+
+Histórico de navegação em um navegador web: Os navegadores da web usam uma pilha para rastrear as páginas da web visitadas. Quando você clica em um link, a página atual é empilhada e a nova página é carregada. Você pode voltar às páginas anteriores desempilhando a pilha.
+
+Implementação de botões "Desfazer" e "Refazer" em aplicativos: Em muitos aplicativos, como editores de texto ou software de design gráfico, pilhas são usadas para rastrear as ações do usuário. Quando o usuário executa uma ação, ela é empilhada. O botão "Desfazer" desempilha a ação mais recente, revertendo-a, e o botão "Refazer" pode reempilhar a ação desfeita.
+
+Resolução de problemas de quebra-cabeças: Em quebra-cabeças como o "Torre de Hanoi", as pilhas são usadas para rastrear os movimentos e resolver o quebra-cabeça.
+
+Avaliação de expressões pós-fixas (notação polonesa reversa): Pilhas são essenciais para a avaliação eficiente de expressões pós-fixas, onde os operandos são empilhados e os operadores aplicados aos operandos no topo da pilha.
+
+Armazenamento temporário de estados em algoritmos de backtracking: Em algoritmos de backtracking, como o de resolução de labirintos, as pilhas são usadas para rastrear o caminho percorrido. Quando um caminho não leva à solução, o último estado é desempilhado e a busca continua de onde parou.
+
+Esses são apenas alguns exemplos de como as pilhas são utilizadas em programação. Elas são uma estrutura de dados versátil e poderosa que desempenha um papel fundamental em muitos algoritmos e aplicações.
+
+7. Filas
