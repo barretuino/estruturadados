@@ -1,0 +1,23 @@
+Árvores binárias são uma estrutura de dados amplamente usada na ciência da computação e programação. Elas são uma forma de estrutura de árvore em que cada nó pode ter até dois filhos: um filho à esquerda e um filho à direita. A estrutura da árvore binária é hierárquica, o que a torna especialmente útil para organizar dados de maneira eficiente e realizar operações de busca, inserção e exclusão de forma otimizada.
+
+Aqui estão alguns conceitos e características importantes relacionados a árvores binárias:
+
+Nós e Raiz: A árvore binária é composta por nós. Um nó é uma estrutura que pode conter dados e referências (ou links) para seus filhos à esquerda e à direita. O nó no topo da árvore é chamado de raiz.
+
+Nós Folha: Nós que não têm filhos são chamados de nós folha.
+
+Subárvore: Um nó de uma árvore binária pode ser raiz de sua própria subárvore, consistindo em seus filhos e seus descendentes.
+
+Altura da Árvore: A altura da árvore é a distância máxima entre a raiz e um nó folha.
+
+Nível de um Nó: O nível de um nó é a distância entre a raiz e esse nó, contada em número de arestas.
+
+Árvore Binária de Busca (BST): Uma árvore binária de busca é uma árvore binária em que cada nó segue a propriedade de que todos os nós na subárvore à esquerda têm valores menores ou iguais ao nó e todos os nós na subárvore à direita têm valores maiores. Isso permite operações de busca, inserção e exclusão eficientes.
+
+Travessias: Existem várias maneiras de percorrer os nós de uma árvore binária, incluindo a travessia em ordem (in-order), pré-ordem (pre-order) e pós-ordem (post-order). Cada uma dessas travessias visita os nós em uma ordem específica.
+
+Balanceamento: Uma árvore binária balanceada é aquela em que a diferença entre as alturas das subárvores esquerda e direita de qualquer nó é no máximo 1. Isso garante operações eficientes em árvores binárias de busca, já que a altura da árvore é mantida em um nível mínimo.
+
+Árvores Binárias Especiais: Existem várias variações de árvores binárias, como árvores binárias completas (todos os níveis são completamente preenchidos, exceto talvez o último), árvores binárias cheias (todos os nós têm 0 ou 2 filhos), e árvores binárias degeneradas (todos os nós têm exatamente um filho).
+
+Árvores binárias são amplamente utilizadas em algoritmos e estruturas de dados, como árvores binárias de busca, que são usadas em bancos de dados, indexação de pesquisa e muitas outras aplicações. A compreensão das árvores binárias é fundamental para programadores e cientistas da computação, pois elas fornecem uma maneira eficiente de organizar e manipular dados.
