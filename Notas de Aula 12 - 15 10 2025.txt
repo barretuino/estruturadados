@@ -1,0 +1,169 @@
+Notas de Aula 12 - Arvores AVL e Arvores B
+
+https://github.com/barretuino/estruturadados
+
+1. Definições 
+
+Uma árvore AVL é uma árvore de busca binária balanceada que foi projetada para manter um equilíbrio entre as subárvores esquerda e direita, garantindo que a altura da árvore seja limitada. O termo "AVL" é uma abreviação dos sobrenomes dos inventores da árvore AVL, Adelson-Velsky e Landis.
+
+As árvores AVL possuem as seguintes características:
+
+1. **Árvore de Busca Binária:** Cada nó em uma árvore AVL tem, no máximo, dois filhos: um filho esquerdo e um filho direito. Os nós à esquerda são menores que o nó pai, e os nós à direita são maiores.
+
+2. **Balanceamento:** A propriedade fundamental de uma árvore AVL é o balanceamento. A diferença de altura entre as subárvores esquerda e direita de qualquer nó (chamada de "fator de equilíbrio") deve ser no máximo 1. Isso garante que a árvore seja relativamente balanceada, com uma altura logarítmica em relação ao número de nós.
+
+3. **Rotação:** Para manter o balanceamento, as árvores AVL usam operações de rotação. Existem quatro tipos principais de rotações: rotação simples à esquerda, rotação simples à direita, rotação dupla à esquerda (ou rotação à direita seguida de rotação à esquerda) e rotação dupla à direita (ou rotação à esquerda seguida de rotação à direita).
+
+4. **Inserção e Exclusão Balanceadas:** Quando você insere ou exclui um nó em uma árvore AVL, é necessário reequilibrar a árvore para manter a propriedade do fator de equilíbrio. Isso envolve a aplicação de rotações conforme necessário.
+
+As árvores AVL são amplamente utilizadas em estruturas de dados e algoritmos, especialmente em bancos de dados e sistemas de pesquisa, devido à garantia de tempos de busca, inserção e exclusão previsíveis e eficientes. O tempo de execução dessas operações em uma árvore AVL é da ordem de O(log n), onde "n" é o número de nós na árvore, o que é muito eficiente.
+
+No entanto, a manutenção do equilíbrio em uma árvore AVL pode tornar as operações de inserção e exclusão mais complexas e requer mais computação do que em árvores de busca binária não balanceadas. Portanto, a escolha de usar uma árvore AVL depende dos requisitos específicos do aplicativo e das operações esperadas.
+
+2. Exemplo de Uso
+
+Um exemplo de uma árvore AVL em Java, incluindo operações de inserção e exibição. Neste exemplo, vamos criar uma classe Node para representar os nós da árvore AVL e uma classe AVLTree para gerenciar a árvore.
+
+class Node {
+    int key, height;
+    Node left, right;
+
+    Node(int key) {
+        this.key = key;
+        this.height = 1;
+    }
+}
+
+public class AVLTree {
+    Node root;
+
+    // Função para obter a altura de um nó (retorna 0 para nós nulos).
+    int height(Node node) {
+        if (node == null) return 0;
+        return node.height;
+    }
+
+    // Função para calcular o fator de equilíbrio de um nó.
+    int getBalanceFactor(Node node) {
+        if (node == null) return 0;
+        return height(node.left) - height(node.right);
+    }
+
+    // Função para realizar uma rotação simples à direita.
+    Node rotateRight(Node y) {
+        Node x = y.left;
+        Node T2 = x.right;
+
+        x.right = y;
+        y.left = T2;
+
+        y.height = Math.max(height(y.left), height(y.right)) + 1;
+        x.height = Math.max(height(x.left), height(x.right)) + 1;
+
+        return x;
+    }
+
+    // Função para realizar uma rotação simples à esquerda.
+    Node rotateLeft(Node x) {
+        Node y = x.right;
+        Node T2 = y.left;
+
+        y.left = x;
+        x.right = T2;
+
+        x.height = Math.max(height(x.left), height(x.right)) + 1;
+        y.height = Math.max(height(y.left), height(y.right)) + 1;
+
+        return y;
+    }
+
+    // Função para inserir um nó na árvore AVL.
+    Node insert(Node root, int key) {
+        if (root == null) {
+            return new Node(key);
+        }
+
+        if (key < root.key) {
+            root.left = insert(root.left, key);
+        } else if (key > root.key) {
+            root.right = insert(root.right, key);
+        } else {
+            // Nós com chaves iguais não são permitidos em uma árvore AVL.
+            return root;
+        }
+
+        // Atualiza a altura deste nó.
+        root.height = 1 + Math.max(height(root.left), height(root.right));
+
+        // Obtem o fator de equilíbrio deste nó para verificar se ele ficou desequilibrado.
+        int balance = getBalanceFactor(root);
+
+        // Realiza rotações para reequilibrar, se necessário.
+        if (balance > 1 && key < root.left.key) {
+            return rotateRight(root);
+        }
+        if (balance < -1 && key > root.right.key) {
+            return rotateLeft(root);
+        }
+        if (balance > 1 && key > root.left.key) {
+            root.left = rotateLeft(root.left);
+            return rotateRight(root);
+        }
+        if (balance < -1 && key < root.right.key) {
+            root.right = rotateRight(root.right);
+            return rotateLeft(root);
+        }
+
+        return root;
+    }
+
+    // Função para percorrer a árvore em ordem.
+    void inOrderTraversal(Node node) {
+        if (node != null) {
+            inOrderTraversal(node.left);
+            System.out.print(node.key + " ");
+            inOrderTraversal(node.right);
+        }
+    }
+
+    public static void main(String[] args) {
+        AVLTree tree = new AVLTree();
+
+        tree.root = tree.insert(tree.root, 10);
+        tree.root = tree.insert(tree.root, 20);
+        tree.root = tree.insert(tree.root, 30);
+
+        System.out.println("Árvore AVL em ordem:");
+        tree.inOrderTraversal(tree.root);
+    }
+}
+
+Neste exemplo, a classe Node representa os nós da árvore AVL, e a classe AVLTree contém as operações de inserção e exibição. Lembre-se de que este é um exemplo simples para demonstrar o conceito de uma árvore AVL em Java. Em uma aplicação real, você pode precisar adicionar mais operações e considerações.
+
+3. Aplicações
+
+As árvores AVL são estruturas de dados eficientes para uma variedade de aplicações que envolvem operações de busca, inserção e exclusão, especialmente quando é necessário manter o equilíbrio da árvore. Alguns dos usos reais para árvores AVL incluem:
+
+Sistemas de Bancos de Dados: Muitos sistemas de gerenciamento de bancos de dados (DBMS) usam árvores AVL para otimizar a pesquisa de registros em índices. Isso acelera consultas SQL, onde a busca é baseada em colunas indexadas.
+
+Sistemas de Arquivos: Sistemas de arquivos hierárquicos usam árvores AVL para otimizar a pesquisa e a organização de diretórios e arquivos.
+
+Compiladores e Interpretadores: Em analisadores léxicos e sintáticos de compiladores, as árvores AVL são usadas para armazenar informações sobre tabelas de símbolos, garantindo que a pesquisa de variáveis e funções seja eficiente.
+
+Sistemas de Georreferenciamento: Aplicações que lidam com dados geoespaciais frequentemente usam árvores AVL para armazenar informações geográficas, permitindo pesquisas rápidas e organização de dados espaciais.
+
+Redes de Computadores: As tabelas de roteamento em roteadores de rede são frequentemente implementadas usando árvores AVL para acelerar a busca por destinos de pacotes.
+
+Sistemas de Gerenciamento de Recursos: Em sistemas que gerenciam recursos compartilhados, como memória ou threads, as árvores AVL são usadas para atribuir recursos de forma eficiente e justa.
+
+Sistemas de Gráficos e Jogos: Em mecanismos de jogos e sistemas de renderização gráfica, as árvores AVL são usadas para acelerar a busca por elementos de cena ou objetos gráficos.
+
+Sistemas de Gerenciamento de Pedidos e Estoque: Em aplicações de comércio eletrônico e gerenciamento de estoque, as árvores AVL são usadas para otimizar a pesquisa de produtos, gerenciamento de pedidos e controle de estoque.
+
+Sistemas de Gerenciamento de Contatos: Aplicativos de lista de contatos e programas de email usam árvores AVL para pesquisa rápida de nomes e informações de contato.
+
+Bancos e Finanças: Setores financeiros usam árvores AVL para otimizar o acesso a dados relacionados a contas, transações e portfólios de investimento.
+
+Sistemas de Recomendação: Em sistemas de recomendação, árvores AVL podem ser usadas para organizar e pesquisar catálogos de produtos, vídeos ou conteúdo para recomendar itens relevantes aos usuários.
+
+Em todos esses cenários, as árvores AVL são valiosas porque garantem tempos de busca, inserção e exclusão previsíveis e eficientes, mesmo quando os dados são modificados ou crescidos ao longo do tempo. Elas são especialmente úteis em situações em que o desempenho é crítico e a estrutura de dados precisa se adaptar dinamicamente às mudanças nos dados.

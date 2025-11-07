@@ -1,0 +1,83 @@
+Notas de Aulas - Grafos - 06/11/2025
+
+Em Estrutura de Dados, um grafo é uma representação abstrata de um conjunto de objetos, onde os objetos são chamados de "vértices" (ou nós) e as conexões entre esses objetos são chamadas de "arestas". Os grafos são utilizados para modelar uma variedade de situações do mundo real, onde entidades podem estar relacionadas umas às outras.
+
+Um grafo é composto por dois conjuntos principais:
+
+Conjunto de Vértices (ou Nós): Representa os objetos individuais ou entidades do sistema que estamos modelando. Cada vértice em um grafo pode conter informações adicionais além de sua identificação, dependendo do contexto.
+
+Conjunto de Arestas (ou Conexões): Representa as relações ou conexões entre os vértices. As arestas podem ser direcionadas ou não direcionadas, dependendo se a relação tem uma direção específica ou não. As arestas também podem ter pesos, que são valores associados a elas, indicando a força, custo ou distância da relação entre dois vértices.
+
+Os grafos podem ser classificados de várias maneiras com base em suas características:
+
+Direcionamento das Arestas:
+
+Grafo Direcionado (ou Digrafo): As arestas têm uma direção específica, indicando que a relação entre dois vértices é unidirecional.
+Grafo Não Direcionado: As arestas não têm direção, indicando que a relação entre os vértices é bidirecional.
+Pesos nas Arestas:
+
+Grafo Ponderado: As arestas têm um valor associado (peso), que pode representar distância, custo, tempo, etc.
+
+Grafo Não Ponderado: As arestas não têm pesos.
+
+Os grafos têm uma ampla gama de aplicações em várias áreas, incluindo:
+
+Redes sociais: Modelagem de redes de amigos, seguidores, conexões entre pessoas.
+
+Sistemas de Transporte: Mapas de rotas, redes rodoviárias, conexões de transporte público.
+
+Telecomunicações: Redes de comunicação, roteamento de dados, conexões entre dispositivos.
+
+Biologia: Modelagem de redes metabólicas, interações entre proteínas, vias genéticas.
+
+Computação: Estruturas de dados para algoritmos de busca, árvores de expansão mínima, algoritmos de caminho mais curto, entre outros.
+
+Os grafos são fundamentais para resolver uma variedade de problemas computacionais e são amplamente utilizados em algoritmos de otimização, busca, planejamento e muitas outras áreas da computação e da ciência.
+
+****************************************************************
+Exemplos de aplicações que usam Grafos
+****************************************************************
+
+Os grafos são amplamente utilizados em uma variedade de aplicações para modelar relações e resolver problemas complexos. Aqui estão alguns exemplos de aplicações do mundo real que fazem uso de grafos:
+
+Redes Sociais:
+
+	Facebook, Twitter, LinkedIn: Essas plataformas utilizam grafos para modelar conexões entre usuários, sugerir amigos, encontrar conexões em comum, entre outras funcionalidades de rede social.
+
+Sistemas de Roteamento e GPS:
+
+	Google Maps, Waze: Utilizam grafos para representar redes de ruas e estradas, planejamento de rotas, cálculo de distâncias mais curtas e tempo estimado de viagem.
+	
+Gestão de Redes e Telecomunicações:
+
+	Roteadores de Internet, Redes de Comunicação: Usam grafos para modelar topologias de rede, roteamento de dados, estabelecimento de conexões e diagnóstico de falhas.
+	
+Bioinformática e Biologia Computacional:
+
+	Modelagem de Redes Metabólicas, Interações de Proteínas: Grafos são usados para representar interações entre moléculas, redes metabólicas, interações entre genes e proteínas.
+	
+Engenharia de Software:
+
+	Análise de Dependências de Código, Fluxo de Controle: Utiliza grafos para visualizar dependências entre módulos de software, encontrar bugs, otimizar código e fluxo de execução.
+
+Gestão de Projetos e Logística:
+
+	Cadeias de Suprimentos, Logística de Transporte: Grafos modelam rotas de transporte, planejamento de logística, otimização de recursos e distribuição.
+	
+Jogos e Simulações:
+
+	Jogos de Estratégia, Simulações Virtuais: Grafos são utilizados para modelar cenários, relacionamentos entre personagens, redes de interação e caminhos.
+
+Sistemas de Recomendação e Comércio Eletrônico:
+
+	Netflix, Amazon: Utilizam grafos para recomendação de filmes/produtos com base nas preferências do usuário, conexões entre produtos e usuários.
+	
+Química e Química Computacional:
+
+	Modelagem de Moléculas, Reações Químicas: Grafos representam moléculas, estruturas atômicas e reações químicas para análise e predição.
+	
+Sistemas de Saúde e Medicina:
+
+	Redes de Interação de Proteínas, Diagnóstico Médico: Grafos modelam redes de interação de proteínas, históricos médicos, diagnósticos baseados em sintomas.
+	
+Estes são apenas alguns exemplos de como os grafos são aplicados em diferentes domínios para modelar, analisar e resolver problemas complexos. Eles são uma estrutura de dados versátil e poderosa usada em uma ampla gama de áreas para representar relacionamentos entre entidades e resolver uma variedade de problemas.

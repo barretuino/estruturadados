@@ -1,0 +1,60 @@
+Notas de Aula 9 - Recursividade
+
+A recursividade é um conceito na programação e na matemática que se refere à capacidade de uma função ou algoritmo se chamar a si mesmo para resolver um problema. Em termos simples, uma função recursiva é uma função que se chama dentro de sua própria definição, geralmente com entradas ligeiramente diferentes, até que uma condição de parada seja atingida.
+
+A recursividade é frequentemente usada para resolver problemas que podem ser quebrados em subproblemas semelhantes, tornando o código mais claro e elegante em muitos casos. No entanto, é importante definir corretamente as condições de parada para evitar que a recursão se torne infinita e leve a um estouro de pilha (stack overflow).
+
+Características da recursividade:
+
+Chamadas repetidas: Uma função recursiva chama a si mesma repetidamente com parâmetros diferentes, com o objetivo de resolver um problema maior que pode ser dividido em subproblemas menores.
+
+Condição de parada: Para evitar recursão infinita, uma função recursiva deve ter uma condição de parada bem definida. Quando essa condição é atingida, a função para de se chamar a si mesma e começa a retornar resultados.
+
+Pilha de chamadas: À medida que as chamadas recursivas são feitas, o sistema mantém uma pilha de chamadas na memória, armazenando informações sobre cada chamada. Essa pilha é usada para rastrear as chamadas ativas e retornar à medida que as condições de parada são alcançadas.
+
+A recursividade é comumente usada para resolver problemas que têm uma estrutura recursiva intrínseca, como algoritmos de busca (por exemplo, pesquisa em árvores), algoritmos de ordenação (por exemplo, mergesort ou quicksort), e problemas matemáticos (por exemplo, cálculo de fatorial ou sequência de Fibonacci).
+
+Aqui está um exemplo simples em Java de uma função recursiva que calcula o fatorial de um número:
+
+public class Fatorial {
+    public static int calcularFatorial(int n) {
+        if (n == 0) {
+            return 1; // Condição de parada: fatorial de 0 é 1
+        } else {
+            return n * calcularFatorial(n - 1); // Chamada recursiva com um subproblema menor
+        }
+    }
+
+    public static void main(String[] args) {
+        int numero = 5;
+        int resultado = calcularFatorial(numero);
+        System.out.println("Fatorial de " + numero + " é " + resultado);
+    }
+}
+
+Neste exemplo, a função calcularFatorial chama a si mesma com um valor menor (n - 1) até que n atinja 0, que é a condição de parada. A partir desse ponto, as chamadas recursivas começam a retornar e calcular o fatorial com base nos resultados parciais.
+
+*************** Exemplos do dia-a-dia ***************
+A recursão é um conceito poderoso na programação que pode ser aplicado em várias situações do dia a dia. Aqui estão alguns exemplos de como a recursão é usada em programação:
+
+Diretórios e sistemas de arquivos: Ao navegar em diretórios e subdiretórios em um sistema de arquivos, a recursão é frequentemente usada. Por exemplo, ao listar todos os arquivos em um diretório e seus subdiretórios.
+
+Árvores e grafos: A recursão é amplamente usada para percorrer árvores e grafos. Por exemplo, a travessia em profundidade (DFS) e a travessia em largura (BFS) de uma árvore ou grafo são implementadas de forma recursiva.
+
+Pesquisas em estruturas de dados: Em estruturas de dados como árvores binárias de busca, a recursão é usada para buscar, inserir ou excluir elementos.
+
+Resolução de problemas matemáticos: A recursão é usada para resolver problemas matemáticos complexos, como o cálculo do fatorial, sequência de Fibonacci, exponenciação rápida, entre outros.
+
+Algoritmos de ordenação e pesquisa: Algoritmos de ordenação como o merge sort e quicksort usam a recursão para dividir e conquistar. Além disso, algoritmos de pesquisa como a pesquisa binária também podem ser implementados de forma recursiva.
+
+Resolução de quebra-cabeças: Em jogos e quebra-cabeças, a recursão é frequentemente usada para encontrar soluções. Por exemplo, a resolução de um quebra-cabeça de Sudoku pode ser implementada de forma recursiva.
+
+Desenho e gráficos: A recursão é usada para gerar fractais e padrões complexos em desenhos e gráficos. Um exemplo famoso é o fractal de Koch.
+
+Expressões matemáticas e análise de linguagens: A avaliação de expressões matemáticas na notação polonesa reversa (RPN) e a análise sintática de linguagens de programação podem ser implementadas de forma recursiva.
+
+Backtracking: Em algoritmos de backtracking, como a resolução de labirintos ou o problema das N rainhas, a recursão é usada para explorar todas as possíveis soluções e retroceder quando uma solução não é viável.
+
+Inteligência artificial: Em algoritmos de busca em IA, como a busca em árvore de decisão, a recursão é usada para avaliar todos os possíveis movimentos e estratégias.
+
+Estes são apenas alguns exemplos do uso da recursão na programação. Ela é uma técnica poderosa que permite resolver problemas complexos dividindo-os em subproblemas menores e mais gerenciáveis, tornando o código mais elegante e legível em muitos casos. No entanto, é importante usar a recursão com cuidado, definindo corretamente as condições de parada para evitar loops infinitos.
