@@ -1,4 +1,4 @@
-Revião para Atividade Avaliativa N1
+Revisão para Atividade Avaliativa N1
 
 1. Introdução a Estruturas de Dados. Tipos básicos de dados - Declaração e Uso de matrizes
 
